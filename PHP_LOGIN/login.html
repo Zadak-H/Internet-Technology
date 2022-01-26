@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Student Registaration Form</title>
+    <link rel="stylesheet" href="./regstyle.css">
+</head>
+<script type="text/javascript">
+    function findTotal() {
+        var arr = document.getElementsByName('qty');
+        var tot = 0;
+        for (var i = 0; i < arr.length; i++) {
+            if (parseInt(arr[i].value))
+                tot += parseInt(arr[i].value);
+        }
+        document.getElementById('Total').value = tot;
+    }
+
+</script>
+
+<body>
+    <form method="post" action="loginphp.php">
+        <h1 style="letter-spacing:2px;font-size: 30px;">Student Registaration Form</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-10">
+                    <label for="fname">Name:</label>
+                </div>
+                <div class="col-90">
+                    <input required type="text" id="name" name="firstname" placeholder="Enter your name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="gname">Guardians Name:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="gname" name="gname" placeholder="Enter your Guardian name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-90">
+                    <input required type="email" id="email" name="email" placeholder="it should contain @,.">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input required type="tel" id="mobile" name="mobile" placeholder="+91-xxxxxxxxxx"
+                        pattern="[+91]{3}-[0-9]{10}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="gender" required>Gender:</label>
+                </div>
+                <div class="col-90">
+                    <input type="radio" id="male" name="gender" value="male" />Male
+                    <input type="radio" id="female" name="gender" value="female" />Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="col-90">
+                    <input type="Date" id="dob" name="dob">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-90">
+                    <textarea name="address" id="address" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Board" required>Board:</label>
+                </div>
+                <div class="col-90">
+                    <select name="Board" id="Board">
+                        <option value=" ">Select Board:</option>
+                        <option value="WBSHE">WBSHE</option>
+                        <option value="ISC">ISC</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Student'shobby">Student's hobby:</label>
+                </div>
+                <div class="col-90">
+                    <input type="checkbox" class="Student'shobby" id="si" name="si"
+                        value="Singing">Singing<br />
+                    <input type="checkbox" class="Student'shobby" id="d" name="d"
+                        value="Dancing">Dancing<br />
+                    <input type="checkbox" class="Student'shobby" id="r" name="r"
+                        value="Reading">Reading<br />
+                    <input type="checkbox" class="Student'shobby" id="sp" name="sp"
+                        value="Sports">Sports<br />
+                    <input type="checkbox" class="Student'shobby" id="ph" name="ph"
+                        value="Photography">Photography<br />
+                    <input type="checkbox" class="Student'shobby" id="tv" name="tv"
+                        value="Travelling">Travelling<br />
+                </div>
+            </div>
+            <label style="font-size: 30px;" for="Marks">Marks:</label>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Eng">Eng:</label>
+                </div>
+                <div class="col-90">
+                    <input  onblur="findTotal()" type="number" id="Eng" name="qty" min="0" max="100" placeholder="marks">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Beng">Beng:</label>
+                </div>
+                <div class="col-90">
+                    <input onblur="findTotal()" type="number" id="Beng" name="qty" min="0" max="100"
+                        placeholder="marks">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Phy">Phy:</label>
+                </div>
+                <div class="col-90">
+                    <input onblur="findTotal()" type="number" id="Phy" name="qty" min="0" max="100" placeholder="marks">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Math">Math:</label>
+                </div>
+                <div class="col-90">
+                    <input onblur="findTotal()" type="number" id="Math" name="qty" min="0" max="100"
+                        placeholder="marks">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Chem">Chem:</label>
+                </div>
+                <div class="col-90">
+                    <input onblur="findTotal()" type="number" id="Chem" name="qty" min="0" max="100"
+                        placeholder="marks">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Total">Total:</label>
+                </div>
+                <div class="col-90">
+                    <input type="number" id="Total" name="Total" min="0" max="100" placeholder="Total" readonly>
+                </div>
+            </div>
+        </div>
+        <p ><input type="submit" value="Submit"></p>
+    </form>
+</body>
+
+</html>

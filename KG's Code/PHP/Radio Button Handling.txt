@@ -1,0 +1,15 @@
+<html><head><title>READING DATA FROM RADIO BUTTONS</title></head>
+<body bgcolor="black">
+<font face="Trebuchet MS" size="5" color="orange">
+<h3> YOU SELECTED:</h3>
+<?php
+if (isset($_REQUEST["radios"]))
+{
+echo $_REQUEST["radios"],"<br>";
+}
+else
+{
+echo "No Options Selected <br/>";
+}
+?>
+</font></body></html>

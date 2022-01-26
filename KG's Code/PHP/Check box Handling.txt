@@ -1,0 +1,19 @@
+<html><head><title>READING DATA FROM CHECK BOXES</title></head>
+<body bgcolor="black">
+<font color="orange" face="verdana" size="5">
+<h1> According to You IPL is required?</h1>
+<?php
+if (isset($_REQUEST["check1"]))
+{
+echo $_REQUEST["check1"],"<br>";
+}
+if (isset($_REQUEST["check2"]))
+{
+echo $_REQUEST["check2"],"<br>";
+}
+if (isset($_REQUEST["check3"]))
+{
+echo $_REQUEST["check3"],"<br>";
+}
+?>
+</font></body></html>
