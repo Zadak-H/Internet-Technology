@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  background: black;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.lefthalf {
+  background: url(../images/bg.jpg);
+  width: 50%;
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  background-size: cover;
+}
+.righthalf {
+  background: linear-gradient(to right, rgb(79, 126, 255), rgb(0, 47, 255));
+  width: 50%;
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  background-size: cover;
+  clip-path: circle(420px at 500px 500px);
+}
+.righthalf .container {
+  height: 540px;
+  width: 555px;
+  background-color: #00000027;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 52%;
+  border-radius: 100px;
+  backdrop-filter: blur(10px);
+  border-top: 2px solid rgba(255, 255, 255, 0.4);
+  border-left: 2px solid rgb(255, 255, 255, 0.4);
+  /* border-right: 2px solid rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.4); */
+  box-shadow: 16px 20px 40px rgba(0, 0, 0);
+  padding: 40px 35px;
+}
+.container * {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  letter-spacing: 0.5px;
+  outline: none;
+  border: none;
+}
+.container h1 {
+  text-shadow: 0 0 2px rgb(38, 0, 255), 0 0 5px #0000ff;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 42px;
+  text-align: center;
+}
+.container label {
+  color: #ffffff;
+  text-shadow: 0 0 2px rgb(38, 0, 255), 0 0 5px #0000ff;
+  display: block;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.container p {
+  color: rgb(0, 0, 0);
+  text-shadow: none;
+  display: inline-block;
+  font-size: 15px;
+  font-weight: 700;
+  padding-left: 10px;
+}
+.buttonclass {
+  position: relative;
+  text-align: center;
+}
+#re-enter {
+  display: inline-block;
+  margin-top: 40px;
+  margin-left: 20px;
+  width: 150px;
+  background-color: rgb(250, 250, 250);
+  color: #0026ff;
+  padding: 12px 0;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 25px;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 8px #0026ff;
+}
